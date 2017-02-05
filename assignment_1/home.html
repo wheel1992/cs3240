@@ -217,6 +217,9 @@
     
         <!-- Custom bootstrap Validator lib -->
         <script src="js/bootstrapvalidator.min.js"></script>
+        
+        <script src="js/custom-animate-nav.js"></script>
+        <script src="js/custom-animate-back-to-top.js"></script>
         <script src="js/custom-validate-join-us-form.js"></script>
         
         <script src="js/custom-scroll-anchor-link.js"></script>
@@ -224,44 +227,9 @@
         <script type="text/javascript">
             
             $(document).ready(function() {
-                
-                /* Handle back-to-top button */
-                $(window).scroll(function () {
-
-                    if ($(this).scrollTop() != 0) {
-                        $('#back-to-top').fadeIn();
-                    } else { // scrollTop = 0   
-                        $('#back-to-top').fadeOut(); 
-                    }
-                }); 
-        
-                
-                $(window).scroll(function () {
-                
-                    var windowHeight = $(window).height();
-                    var scrollValue = $(this).scrollTop();
-                    
-                    if ($(this).scrollTop() != 0 && $(this).scrollTop() >= windowHeight - 500) {
-                        //
-                        updateNavBlue();
-                        
-                        
-                    } else { // scrollTop = 0   
-                        
-                       updateNavTransparent();
-                    }
-                }); 
-                 
-               
             }) // document ready
             
-            function updateNavBlue() {
-                $('.navbar-default').stop().animate({ backgroundColor: 'rgba(3,169,244, 0.9)'}, 500);
-            } 
-            
-            function updateNavTransparent() {
-                 $('.navbar-default').stop().animate({ backgroundColor : 'rgba(0,0,0, 0.1)'}, 500);
-            }
+
             
             
         </script>

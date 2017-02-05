@@ -176,6 +176,9 @@
     
         <!-- Custom bootstrap Validator lib -->
         <script src="js/bootstrapvalidator.min.js"></script>
+        
+        <script src="js/custom-animate-nav.js"></script>
+        <script src="js/custom-animate-back-to-top.js"></script>
         <script src="js/custom-validate-join-us-form.js"></script>
         <script src="js/custom-validate-contact-us-form.js"></script>
         
@@ -190,36 +193,7 @@
                 $(window).resize(function() {
                     updateTheTeamSplashScreen();
                 });
-                
-                
-                /* Handle back-to-top button */
-                $(window).scroll(function () {
 
-                    if ($(this).scrollTop() != 0) {
-                        $('#back-to-top').fadeIn();
-                    } else { // scrollTop = 0   
-                        $('#back-to-top').fadeOut(); 
-                    }
-                }); 
-
-
-                $(window).scroll(function () {
-                
-                    var windowHeight = $(window).height();
-                    var scrollValue = $(this).scrollTop();
-                    
-                    if ($(this).scrollTop() != 0 && $(this).scrollTop() >= windowHeight - 500) {
-                        //
-                        
-                        $('.navbar-default').stop().animate({ backgroundColor: 'rgba(3,169,244, 0.9)'}, 500);
-                        
-                    } else { // scrollTop = 0   
-                        
-                        $('.navbar-default').stop().animate({ backgroundColor : 'rgba(0,0,0, 0.1)'}, 500);
-                    }
-                }); 
-                
-               
             }) // document ready
             
             function updateTheTeamSplashScreen() {
