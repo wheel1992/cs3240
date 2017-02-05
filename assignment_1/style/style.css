@@ -103,7 +103,7 @@ body {
 
 .home-splash-screen { 
     
-    background: url("../resource/home_screen_4.fw.png");
+    background: url("../resource/home_screen_4_2.jpg");
     background-repeat: no-repeat;
 background-attachment: scroll;
 background-position: center;
@@ -215,7 +215,7 @@ background-size: cover;
 }  
 
 .home-feature-screen-moe-cover {
-    background: url("../resource/home_moe_screen_2.fw.png");
+    background: url("../resource/home_moe_screen_2.jpg");
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center;
@@ -233,7 +233,7 @@ background-size: cover;
 
 
 .the-team-splash-screen {
-    background: url("../resource/the_team_screen.jpg");
+    background: url("../resource/the_team_screen.1920.1080.jpg");
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: top left;
@@ -301,7 +301,7 @@ background-size: cover;
 
 .contact-us-splash-screen { 
     
-    background: url("../resource/contact_us_screen.1920.1080.fw.png");
+    background: url("../resource/contact_us_screen.1920.1080.jpg");
     background-repeat: no-repeat;
 background-attachment: scroll;
 background-position: center;
