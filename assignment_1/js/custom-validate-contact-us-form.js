@@ -6,25 +6,41 @@
             invalid: 'glyphicon glyphicon-remove',
             validating: 'glyphicon glyphicon-refresh'
         },
-
+       excluded: [':disabled'],
        fields: {
            input_contact_us_message: {
+                trigger: 'blur',
                 validators: {
+                        notEmpty: {
+                            message: 'Please do not leave your message empty'
+                        }
+                    /*
                         stringLength: {
                             min: 1,
                             message: 'Please do not leave your message empty'
                         }
+                        */
                 } // validators   
            },
 
            input_contact_us_email: {
+                trigger: 'blur',
                 validators: {
                     notEmpty: {
                         message: 'Please enter your email address'
                     },
-                    emailAddress: {
+                    
+                    regexp: {
+                        regexp: '^[^@\\s]+@([^@\\s]+\\.)+[^@\\s]+$',
                         message: 'Please enter a valid email address'
                     }
+                    /*
+                    emailAddress: {
+                        message: 'Please enter a valid email address' 
+                    }
+                    */
+                    
+                    
                 } // validators
             }
 
@@ -32,15 +48,43 @@
 
 
    })
+   /*
+   .on('err.validator.bv', function(e, data) {
+            // data.bv        --> The FormValidation.Base instance
+            // data.field     --> The field name
+            // data.element   --> The field element
+            // data.validator --> The current validator name
+
+            if (data.field === 'input_contact_us_email') {
+                // The email field is not valid
+                data.element
+                    .data('bv.messages')
+                    // Hide all the messages
+                    .find('.help-block[data-bv-for="' + data.field + '"]').hide()
+                    // Show only message associated with current validator
+                    .filter('[data-bv-validator="' + data.validator + '"]').show();
+            }
+        })
+    */ 
 
    .on('success.form.bv', function(e) {
-        $('#form-submit-success-message').slideDown({ opacity: "show" }, "slow"); // Show feedback success for form submission
+    
+        // reset form
+        $('#form-contact-us').bootstrapValidator('resetForm', true);
+        
+        // Show feedback success for form submission
+        var overlay = $("#overlay")// document.getElementById('overlay');
+        //overlay.style.display = "block";
+        overlay.css("display", "block");
+        overlay.find("#overlay-message-header p").html("Submission");
+        overlay.find("#overlay-message-content").html("Thank you for contacting us. We will get back to you within 2 working days.");
 
-        $('.form-contact-us').data('bootstrapValidator').resetForm();
-
+       
+       
         // Prevent form submission
         e.preventDefault();
-
+       
+        
         // Get the form instance
         var $form = $(e.target);
 
@@ -51,6 +95,8 @@
         $.post($form.attr('action'), $form.serialize(), function(result) {
             console.log(result);
         }, 'json');
+        
+       
     });
 
 

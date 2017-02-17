@@ -9,6 +9,7 @@
 
        fields: {
            input_name: {
+                trigger: 'blur',
                 validators: {
                         stringLength: {
                             min: 2,
@@ -21,11 +22,13 @@
            },
 
            input_email: {
+                trigger: 'blur',
                 validators: {
                     notEmpty: {
                         message: 'Please enter your email address'
                     },
-                    emailAddress: {
+                    regexp: {
+                        regexp: '^[^@\\s]+@([^@\\s]+\\.)+[^@\\s]+$',
                         message: 'Please enter a valid email address'
                     }
                 } // validators
@@ -37,10 +40,17 @@
    })
 
    .on('success.form.bv', function(e) {
-        $('#form-submit-success-message').slideDown({ opacity: "show" }, "slow"); // Show feedback success for form submission
+    
+        // reset form
+        $('#home-form-join-us-now').bootstrapValidator('resetForm', true);
 
-        $('#home-form-join-us-now').data('bootstrapValidator').resetForm();
-
+        // Show feedback success for form submission
+        var overlay = $("#overlay")// document.getElementById('overlay');
+        //overlay.style.display = "block";
+        overlay.css("display", "block");
+        overlay.find("#overlay-message-header p").html("Submission");
+        overlay.find("#overlay-message-content").html("Thank you for joining with us. Hear the latest news from us from now on!.");
+       
         // Prevent form submission
         e.preventDefault();
 

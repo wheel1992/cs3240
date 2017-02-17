@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+ 
         <title>Contact Us - Syllabus</title>
 
         <!-- Bootstrap -->
@@ -30,9 +30,11 @@
                         <span class="icon-bar middle-bar"></span>
                         <span class="icon-bar bottom-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="home.html">
-                        Syllabus
-                    </a>
+                    <div class="navbar-brand">
+                        <a  href="home.html">
+                            Syllabus
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -55,32 +57,34 @@
         
         <div id="top-container" class="container-fluid">
             
-            <div class="row contact-us-splash-screen fill">
+            <div class="row splash-view splash-view-contact-us fill">
                 
                 <div class="col-xs-12 col-md-offset-2 col-md-8 fill">
                 
-                    <div class="contact-us-splash-screen-content">
-                        <h1 class="title">Contact Us</h1>
-                        <h5 class="title">Do you have any burning questions? Or any related to tuition or Chinese? We will try to answer to your questions within the next two working days!</h5>
+                    <div class="splash-view-content">
+                        <h1 class="title title-inverse">Contact Us</h1>
+                        <h4 class="details details-inverse">Do you have any burning questions? Or any related to tuition or Chinese? We will try to answer to your questions within the next two working days!</h4>
                         
                         <br/>
                        
                         
-                        <form action="#" method="post" class="form-contact-us"  id="form-contact-us">
+                        <form action="#" method="post" class="form-contact-us" id="form-contact-us">
                         
                             <div class="form-group row">
-
-                                <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                   <input type="email" class="form-control form-control-lg custom-input" id="input_contact_us_email" name="input_contact_us_email" placeholder="your_email@address.com" required/> 
+                                <div class="col-xs-12 col-sm-offset-2 col-sm-8">
+                                    <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                       <input type="text" class="form-control form-control-lg custom-input" id="input_contact_us_email" name="input_contact_us_email" placeholder="your_email@address.com" required/> 
+                                    </div>
                                 </div>
-
                             </div>
 
                             <div class="form-group row">
-                                <textarea type="text" class="" id="input_contact_us_message" name="input_contact_us_message" placeholder="Your Message" required></textarea>
+                                <div class="col-xs-12 col-sm-offset-2 col-sm-8">
+                                    <textarea type="text" class="" id="input_contact_us_message" name="input_contact_us_message" placeholder="Your Message" required></textarea>
+                                </div>  
                             </div>
 
-                            <button type="submit" class="btn btn-primary btn-lg btn-form-submit-join-us">Submit</button>
+                            <button type="submit" class="custom-btn custom-btn-blue btn-form-submit-join-us">SUBMIT</button>
 
                         </form>
                     
@@ -96,21 +100,36 @@
                         <div class="footer-company">
                             <!--
                             <a class="footer-company-logo" href="#"><img  src=""/></a>
-                            -->
+                            
                             <a class="footer-company-brand" href="#">Syllabus</a>
+                            -->
+                            
                             <div class="footer-company-address">
-                                <p>10 Marina Boulevard, Straits View, Singapore 018983</p>
-                                <p>Contact : <a href="tel:+6596155540">+6596155540</a></p> 
+                                <div class="icon-left">
+                                    <i class="glyphicon glyphicon-map-marker" style="color:#fff;"></i>
+                                </div>
+                                
+                                <div class="details-right">
+                                    <a href="http://maps.google.com/?q=Singapore 018983">10 Marina Boulevard, Straits View, Singapore 018983</a>
+                                </div>
                             </div>
+                            
+                            
+                            <div class="footer-company-contact">
+                                 <div class="icon-left">
+                                    <i class="glyphicon glyphicon-earphone" style="color:#fff;"></i>
+                                </div>
+                                
+                                <div class="details-right">
+                                    <a href="tel:+6596155540">+6596155540</a>
+                                </div>
+                            </div>
+
                         </div>
 
-                        <p class="footer-links">
-                            <a href="the_team.html">&bull; The Team</a>
-                            <a href="contact_us.html">&bull; Contact Us</a>
-                        </p>
-
                     </div>
-
+                    
+                    <!--
                     <div class="footer-right">
                         <p>Contact Us</p>
                         <form action="#" method="post" class="form-contact-us" id="form-contact-us">
@@ -130,6 +149,7 @@
                             
                         </form>
                     </div>
+                    -->
 
                     <div class="footer-copyright">
                         <p>&copy;2017 Syllabus</p>
@@ -139,9 +159,32 @@
                 
             </div>
            
-            <a id="back-to-top" href="#top-container" class="btn btn-circle btn-primary btn-lg back-to-top" role="button" title="Back to Top" data-toggle="tooltip" data-placement="top">
+            <a id="back-to-top" href="#top-container" class="btn btn-circle btn-lg back-to-top" role="button" title="Back to Top" data-toggle="tooltip" data-placement="top">
                 <span class="glyphicon glyphicon-chevron-up"></span>
             </a>
+            
+            <div id="overlay">
+                <div id="overlay-flex">
+                    <div id="overlay-message">
+
+                        <div id="overlay-message-header">
+                            <p>header</p>
+                        </div>
+
+                        <div id="overlay-close">
+                            <i class="glyphicon glyphicon-remove"></i>
+                        </div>
+
+                        <!--<span id="overlay-close">&times;</span>-->
+                        <div id="overlay-message-content">
+                            <p id="overlay-message-content-text">This is a message</p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            
             
         </div><!-- /.container -->
 
@@ -156,7 +199,7 @@
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     
         <!-- Custom bootstrap Validator lib -->
-        <script src="js/bootstrapvalidator.min.js"></script>
+        <script src="js/bootstrapValidator.min.js"></script>
         
         <script src="js/custom-animate-nav.js"></script>
         <script src="js/custom-animate-back-to-top.js"></script>
@@ -164,11 +207,13 @@
         <script src="js/custom-validate-contact-us-form.js"></script>
         
         <script src="js/custom-scroll-anchor-link.js"></script>
+        <script src="js/custom-overlay.js"></script>
         
         <script type="text/javascript">
             
             $(document).ready(function() {
             }) // document ready
+            
         </script>
         
     </body>

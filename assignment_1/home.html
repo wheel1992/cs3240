@@ -30,9 +30,12 @@
                         <span class="icon-bar middle-bar"></span>
                         <span class="icon-bar bottom-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="home.html">
-                        Syllabus
-                    </a>
+                    <div class="navbar-brand">
+                        <a  href="home.html">
+                            Syllabus
+                        </a>
+                    </div>
+                    
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -55,14 +58,14 @@
         
         <div id="top-container" class="container-fluid">
             
-            <div class="row home-splash-screen fill">
+            <div class="row splash-view splash-view-home-intro fill">
                 
                 <div class="col-xs-12 col-md-12 col-lg-12 fill">
                 
-                    <div class="home-splash-screen-content">
-                        <h1 class="title">Simple &bull; Reliable &bull; Learn</h1>
+                    <div class="splash-view-content">
+                        <h1 class="title title-inverse">Simple &bull; Reliable &bull; Learn</h1>
 
-                        <h2 class="subtitle">Learn Chinese in a different way. Never feel bored again.</h2>
+                        <h3 class="details details-inverse">Learn Chinese in a different way. Never feel bored again.</h3>
 
                         <div class="border-white-box">
                             <li>
@@ -76,58 +79,49 @@
             </div>
             
             
-            <!-- <div class="row div-section-blank-space"></div> -->
-            
-            <div class="row home-feature-screen fill">
-                <div class="col-xs-12
-                            col-md-offset-1 col-md-5 
-                            fill-resize"4>
-
-                    <div class="home-feature-screen-content">
-                        <img src="resource/iphone_test_mode_2.fw.png" class="home-feature-image-left" />
-                    </div>
-                    
-                </div>
-               
-                <div class="col-xs-12
-                            col-md-5
-                            fill-resize">
-                    <div class="home-feature-screen-content">
-                        <h5 class="category">Learning</h5>
-                        <h1 class="title">Simple</h1>
-                        <h5 class="details">Syllabus provides learn and test modes to simplify your learning.</h5>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- <div class="row div-section-blank-space"></div> -->
-            
-            <div class="row home-feature-screen fill home-feature-screen-moe-cover">
-
-                <div class="col-xs-12 fill">
-                    <div class="home-feature-screen-content">
-                        <h5 class="category" >Content</h5>
-                        <h1 class="title">Reliable</h1>
-                        <h5 class="details">Sylabus provides updated content based on latest Ministry of Education (MOE) syllabus. Syllabus aims to give the best learning platform for you.</h5>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="home-join-us-now"></div>
             <div class="row div-section-blank-space"></div>
             
-            <div class="row home-feature-screen fill">
+            <div class="row card">
+                <div class="card-content-flex">
+                    <div>
+                        <h4 class="category">Learning</h4>
+                        <h1 class="title">Simple</h1>
+                        <h4 class="details">Syllabus provides learn and test modes to simplify your learning.</h4>
+                    </div>
+                </div>
                 
-                <form action="#" method="post" class="home-form-join-us-now"  id="home-form-join-us-now">
+                <div class="card-image card-image-flex">
+                    <img src="resource/home_feature_2_cropped.fw.png"  />
+                </div>
+            </div>
+            
+            <div class="row div-section-blank-space"></div>
+            
+            <div class="row splash-view splash-view-home-moe ">
+                <div class="splash-view-content">
+                    <h4 class="category category-inverse">Content</h4>
+                    <h1 class="title title-inverse">Reliable</h1>
+                    <h4 class="details details-inverse">Syllabus provides updated content based on latest Ministry of Education (MOE) syllabus. Syllabus aims to give the best learning platform for you.</h4>
+                </div>
+            </div>
+           
+            <div class="row div-section-blank-space"></div>
+            
+            <div id="home-join-us-now"></div>
+            
+            <div class="row splash-view splash-view-form-body fill">
+                
+                <form action="#" method="post" class="home-form-join-us-now splash-view-content" id="home-form-join-us-now">
 
                     <h1 class="form-title">Join Us Now</h1>
                     <br/>
-                    <h5>Get the latest updates from us!</h5>
-                    <h5>You will be notified once Syllabus is launched in App Store and Google Play Store.</h5>
+                    <h4 class="details">Get the latest updates from us!
+                    You will be notified once Syllabus is launched in App Store and Google Play Store.</h4>
                     <br/>
                     <br/>
+                    
                     <div class="form-group row">
-                        <div class="col-sm-12 col-md-offset-2 col-md-8">
+                        <div class="col-xs-12 col-sm-offset-3 col-sm-6">
                             <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                                 <input type="text" class="form-control form-control-lg custom-input" id="inputName" name="input_name" placeholder="Your name">
                             </div>
@@ -135,14 +129,14 @@
                     </div>
 
                     <div class="form-group row">
-                        <div class="col-sm-12 col-md-offset-2 col-md-8">
+                        <div class="col-xs-12 col-sm-offset-3 col-sm-6">
                             <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                               <input type="email" class="form-control form-control-lg custom-input" id="inputEmail" name="input_email" placeholder="your_email@address.com"> 
+                               <input type="text" class="form-control form-control-lg custom-input" id="inputEmail" name="input_email" placeholder="your_email@address.com"> 
                             </div>
                         </div>
                     </div>
-
-                    <button type="submit" class="btn btn-primary btn-lg btn-form-submit-join-us">Join Us</button>
+                    
+                    <button type="submit" class="custom-btn custom-btn-blue btn-form-submit-join-us">JOIN US</button>
 
                 </form>
                 
@@ -156,21 +150,35 @@
                         <div class="footer-company">
                             <!--
                             <a class="footer-company-logo" href="#"><img  src=""/></a>
-                            -->
+                            
                             <a class="footer-company-brand" href="#">Syllabus</a>
+                            -->
+                            
                             <div class="footer-company-address">
-                                <p>10 Marina Boulevard, Straits View, Singapore 018983</p>
-                                <p>Contact : <a href="tel:+6596155540">+6596155540</a></p> 
+                                <div class="icon-left">
+                                    <i class="glyphicon glyphicon-map-marker" style="color:#fff;"></i>
+                                </div>
+                                
+                                <div class="details-right">
+                                    <a href="http://maps.google.com/?q=Singapore 018983">10 Marina Boulevard, Straits View, Singapore 018983</a>
+                                </div>
                             </div>
+                            
+                            
+                            <div class="footer-company-contact">
+                                 <div class="icon-left">
+                                    <i class="glyphicon glyphicon-earphone" style="color:#fff;"></i>
+                                </div>
+                                
+                                <div class="details-right">
+                                    <a href="tel:+6596155540">+6596155540</a>
+                                </div>
+                            </div>
+
                         </div>
 
-                        <p class="footer-links">
-                            <a href="the_team.html">&bull; The Team</a>
-                            <a href="contact_us.html">&bull; Contact Us</a>
-                        </p>
-
                     </div>
-
+<!--
                     <div class="footer-right">
                         <p>Contact Us</p>
                         <form action="#" method="post" class="form-contact-us" id="form-contact-us">
@@ -190,7 +198,7 @@
                             
                         </form>
                     </div>
-
+-->
                     <div class="footer-copyright">
                         <p>&copy;2017 Syllabus</p>
                     </div>
@@ -199,9 +207,32 @@
                 
             </div>
            
-            <a id="back-to-top" href="#top-container" class="btn btn-circle btn-primary btn-lg back-to-top" role="button" title="Back to Top" data-toggle="tooltip" data-placement="top">
+            <a id="back-to-top" href="#top-container" class="btn btn-circle btn-lg back-to-top" role="button" title="Back to Top" data-toggle="tooltip" data-placement="top">
                 <span class="glyphicon glyphicon-chevron-up"></span>
             </a>
+            
+            
+            <div id="overlay">
+                <div id="overlay-flex">
+                    <div id="overlay-message">
+
+                        <div id="overlay-message-header">
+                            <p>header</p>
+                        </div>
+
+                        <div id="overlay-close">
+                            <i class="glyphicon glyphicon-remove"></i>
+                        </div>
+
+                        <!--<span id="overlay-close">&times;</span>-->
+                        <div id="overlay-message-content">
+                            <p id="overlay-message-content-text">This is a message</p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
             
         </div><!-- /.container -->
 
@@ -223,15 +254,13 @@
         <script src="js/custom-validate-join-us-form.js"></script>
         
         <script src="js/custom-scroll-anchor-link.js"></script>
+        <script src="js/custom-overlay.js"></script>
         
         <script type="text/javascript">
             
             $(document).ready(function() {
             }) // document ready
-            
-
-            
-            
+ 
         </script>
         
     </body>
